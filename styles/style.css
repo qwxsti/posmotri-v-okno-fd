@@ -64,12 +64,17 @@ ol {
 
 .search-form {
   display: flex;
+  flex-direction: row;
   align-items: flex-end;
   gap: 40px;
 }
 
 .search-form__fieldset {
   border: 0;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: auto;
+  margin-left: 1px;
 }
 
 .search-form__fieldset-title {
@@ -161,15 +166,12 @@ ol {
   position: relative;
   max-height: 298px;
   overflow-y: auto;
+  margin-top: 26px;
 }
 
 .content__details {
   min-width: 100%;
   min-height: 100%;
-}
-
-.content__list-container {
-  margin-top: 26px;
 }
 
 .content__list-item {
@@ -188,15 +190,29 @@ ol {
   overflow: hidden;
   text-overflow: ellipsis;
   color: #fff;
+  flex-grow: 1;
 }
 
 .content__video-card-title {
   font-family: "Oswald", sans-serif;
   text-transform: uppercase;
+  font-weight: 700;
+  line-height: 100%;
+  letter-spacing: 0;
+  font-size: 30px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
   color: #fff;
+  margin-bottom: 6px;
+}
+
+.content__video-card-description {
+  font-family: "Fira Sans Condensed", sans-serif;
+  font-size: 18px;
+  line-height: 18.2px;
+  letter-spacing: 0;
+  font-weight: 400;
 }
 
 .content__card-link {
@@ -226,10 +242,6 @@ ol {
   height: 103px;
   object-fit: cover;
   object-position: center;
-}
-
-.content__video-card-description-container {
-  flex-grow: 1;
 }
 
 .result__video-container {
@@ -288,4 +300,10 @@ ol {
 
 .button:focus-visible {
   outline: 1px solid #fff;
+}
+
+.search-form__submit-button {
+  margin-left: 6px;
+  margin-top: auto;
+  width: 100%;
 }
